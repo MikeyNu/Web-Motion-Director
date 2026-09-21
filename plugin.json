@@ -1,0 +1,14 @@
+{
+  "$schema": "https://agent-plugins.org/schemas/1.0.0/plugin.schema.json",
+  "name": "web-motion-director",
+  "version": "1.0.0",
+  "description": "Design, implement, and verify intentional motion systems for websites and web applications.",
+  "license": "MIT",
+  "keywords": [
+    "web-animation",
+    "motion-design",
+    "scroll-animation",
+    "page-transitions",
+    "frontend"
+  ]
+}

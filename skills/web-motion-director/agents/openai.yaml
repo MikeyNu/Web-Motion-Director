@@ -1,0 +1,6 @@
+interface:
+  display_name: "Web Motion Director"
+  short_description: "Design, implement, and verify intentional web motion"
+  default_prompt: "Use $web-motion-director to inspect this frontend, decide where motion is useful, define a product-specific motion language, implement it with the appropriate stack, and verify the actual motion across desktop, mobile, keyboard, and reduced-motion states."
+policy:
+  allow_implicit_invocation: true
