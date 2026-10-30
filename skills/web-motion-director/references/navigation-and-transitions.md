@@ -87,6 +87,12 @@ Semantic state is authoritative:
 - background interaction is disabled only while appropriate;
 - body scroll lock is cleaned up reliably.
 
+### Suspension and return
+
+Treat cancellation as a state transition. If a page or view is retained for return, canceling its animation and fallback timer must not leave a `closing` guard, invisible dialog, focus trap, or body lock stranded. Settle the intended state before suspension or define a reliable resume path. Restore the correct focus and scroll context when the view returns; preserve data and selection without replaying a submission. Do not depend on a page-exit event as the only chance to save a draft, because it may not fire.
+
+Check open, closing, and pending-operation states across leave/return. Distinguish a handler test with synthetic events from an actual browser cache restoration. See the [dated lifecycle evidence](../RESEARCH.md#31-october-2026-qa-and-lifecycle-refresh).
+
 ## Transition duration
 
 A transition that users encounter repeatedly should generally feel faster than a one-time brand intro. If people can complete the destination task before the transition finishes, the transition is probably too long.

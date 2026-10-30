@@ -2,7 +2,9 @@
 
 This is a portable skills-only source package. It contains the `web-motion-director` skill under `skills/web-motion-director` plus a plugin manifest.
 
-It is not an MCP server and does not grant browser, repository, animation-library, or deployment capabilities by itself. Use the host's supported plugin or skill installation workflow. Start with `skills/web-motion-director/SKILL.md` and `INSTALL.md`.
+It is not an MCP server and does not grant browser, repository, animation-library, or deployment capabilities by itself. Use the host's supported plugin or skill installation workflow. Start with [the skill](skills/web-motion-director/SKILL.md) and [installation guidance](skills/web-motion-director/INSTALL.md).
+
+Version 1.2.2 strengthens task routing, interruption recovery, and evidence reporting. Narrow repairs preserve the approved direction; new work shares one exploration with Graphic Design. The source helpers reject missing or malformed inputs, and browser samples are explicitly separate from motion verification. See the [31 October QA record](VALIDATION-2026-10-31-QA.md), [reproducible motion-repair case](evals/qa-2026-10-31/README.md), and [helper contracts](skills/web-motion-director/scripts/README.md). Run `python3 -m unittest discover -s tests -v` for the offline package and helper checks. CI runs the same suite.
 
 Version 1.2.0 adds [motion principles and choreography](skills/web-motion-director/references/motion-principles-and-choreography.md), informed by nine owner-selected clips and primary research. It develops staging, rhythm, motion models, masks, type, shared imagery, and reliable interruption while preserving expressive art direction. Use [joint design with Graphic Design](skills/web-motion-director/references/graphic-design-coordination.md) from the first composition. See [the skill](skills/web-motion-director/SKILL.md) and [the dated validation](VALIDATION-2026-10-30.md).
 

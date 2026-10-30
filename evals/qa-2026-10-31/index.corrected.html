@@ -1,0 +1,177 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>Juniper notes</title>
+  <style>
+    body { margin: 0; background: #f4efd9; color: #172c29; font: 18px system-ui; }
+    main { max-width: 640px; margin: 60px auto; padding: 32px; }
+    button {
+      font: inherit;
+      background: #e9a389;
+      color: #172c29;
+      padding: 14px 24px;
+      border: 0;
+      border-radius: 20px;
+      cursor: pointer;
+      max-width: 100%;
+      box-sizing: border-box;
+    }
+    button:focus-visible { outline: 3px solid #172c29; outline-offset: 4px; }
+    .details {
+      background: linear-gradient(110deg, #d8dec0, #f1d3ad);
+      padding: 24px;
+      border-radius: 24px;
+      margin-top: 24px;
+      opacity: 1;
+      transform: translateY(0);
+    }
+    .details[data-open="false"] {
+      opacity: 0;
+      transform: translateY(8px);
+      pointer-events: none;
+    }
+    [hidden] { display: none !important; }
+    @media (prefers-reduced-motion: reduce) {
+      .details { transform: none !important; }
+    }
+  </style>
+</head>
+<body>
+  <main>
+    <h1>Juniper notes</h1>
+    <p>A small workspace for collecting ideas.</p>
+    <button id="toggle" type="button" aria-expanded="false" aria-controls="details" hidden>Show notebook details</button>
+    <section id="details" class="details" aria-labelledby="details-title">
+      <h2 id="details-title">Notebook details</h2>
+      <p>Seven notes, gathered this week.</p>
+      <button id="close" type="button" hidden>Close details</button>
+    </section>
+  </main>
+  <script>
+    (() => {
+      const toggle = document.getElementById('toggle');
+      const details = document.getElementById('details');
+      const close = document.getElementById('close');
+      const motionPreference = window.matchMedia('(prefers-reduced-motion: reduce)');
+      const closedFrame = { opacity: 0, transform: 'translateY(8px)' };
+      const openFrame = { opacity: 1, transform: 'translateY(0)' };
+      const duration = 180;
+      let expanded = false;
+      let animation = null;
+      let fallback = null;
+      let revision = 0;
+
+      function stopMotion() {
+        clearTimeout(fallback);
+        fallback = null;
+        if (animation) {
+          const previous = animation;
+          animation = null;
+          previous.onfinish = null;
+          previous.oncancel = null;
+          previous.cancel();
+        }
+      }
+
+      function settle(ticket = revision) {
+        if (ticket !== revision) return;
+        stopMotion();
+        details.hidden = !expanded;
+      }
+
+      function syncState() {
+        toggle.setAttribute('aria-expanded', String(expanded));
+        toggle.textContent = expanded ? 'Hide notebook details' : 'Show notebook details';
+        details.dataset.open = String(expanded);
+        details.inert = !expanded;
+        details.setAttribute('aria-hidden', String(!expanded));
+        // This also removes the only panel control from Tab order without inert support.
+        close.disabled = !expanded;
+      }
+
+      function setExpanded(next) {
+        if (next === expanded) return;
+        const canAnimate = !motionPreference.matches && typeof details.animate === 'function';
+        let from = closedFrame;
+        if (canAnimate && !details.hidden) {
+          // Snapshot the current rendered position before canceling an interrupted effect.
+          const current = getComputedStyle(details);
+          from = { opacity: current.opacity, transform: current.transform };
+        }
+
+        const ticket = ++revision;
+        stopMotion();
+        expanded = next;
+        // An inline disclosure keeps focus at its trigger on open. Never defer focus.
+        if (!expanded && details.contains(document.activeElement)) {
+          toggle.focus({ preventScroll: true });
+        }
+        syncState();
+        details.hidden = false;
+
+        if (!canAnimate) {
+          settle(ticket);
+          return;
+        }
+
+        const target = expanded ? openFrame : closedFrame;
+        const distance = Math.abs(Number(from.opacity) - target.opacity);
+        if (distance < 0.001) {
+          settle(ticket);
+          return;
+        }
+
+        try {
+          const milliseconds = Math.max(1, Math.round(duration * distance));
+          const current = details.animate([from, target], {
+            duration: milliseconds,
+            easing: 'cubic-bezier(.2,0,0,1)',
+            fill: 'both'
+          });
+          animation = current;
+          const finish = () => {
+            if (ticket === revision && animation === current) settle(ticket);
+          };
+          current.onfinish = finish;
+          current.oncancel = finish;
+          // Cosmetic cleanup only: state, focus, and controls are already current.
+          // A missing animation event must not strand the closing panel in layout.
+          fallback = setTimeout(finish, milliseconds + 80);
+        } catch {
+          // Animation is optional; the disclosure still works if the API fails.
+          settle(ticket);
+        }
+      }
+
+      toggle.addEventListener('click', () => setExpanded(!expanded));
+      close.addEventListener('click', () => setExpanded(false));
+      document.addEventListener('keydown', (event) => {
+        if (!event.defaultPrevented && event.key === 'Escape' && expanded &&
+            (event.target === toggle || details.contains(event.target))) {
+          event.preventDefault();
+          setExpanded(false);
+        }
+      });
+
+      const settlePreferenceChange = () => {
+        ++revision;
+        settle();
+      };
+      if (motionPreference.addEventListener) {
+        motionPreference.addEventListener('change', settlePreferenceChange);
+      } else {
+        motionPreference.addListener(settlePreferenceChange);
+      }
+      window.addEventListener('pagehide', settlePreferenceChange);
+
+      // Without JavaScript the notebook information remains visible, with no dead buttons.
+      syncState();
+      settle();
+      toggle.hidden = false;
+      close.hidden = false;
+    })();
+  </script>
+</body>
+</html>

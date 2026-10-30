@@ -35,13 +35,13 @@ A static screenshot is treated as evidence of composition only. If no temporal r
 - `references/graphic-design-coordination.md`: joint visual/temporal design, shared contracts, early prototyping, and reference evidence
 - `references/motion-principles-and-choreography.md`: researched principles, sequence scoring, motion models, and practical visual construction
 - `scripts/motionctl.py`: conservative static motion-risk and plan helper
-- `scripts/browser_motion_audit.py`: optional Playwright temporal sampling helper
+- `scripts/browser_motion_audit.py`: optional Playwright static scroll sampler, with explicit capture and evidence limits
 - `RESEARCH.md`: research register
 - `CHATGPT_PROJECT_INSTRUCTIONS.md`: compact project instruction bridge
 - `INSTALL.md`: installation and use guidance
 - `agents/openai.yaml`: host metadata
 
-The downloadable v1.0.0 package may include additional validation and evaluation artifacts. This repository keeps the reusable source clean and excludes generated screenshots, bytecode, caches, and other test evidence.
+The repository includes offline helper regression tests and dated validation records. Generated screenshots, bytecode, and caches stay outside the reusable package. Read [helper usage](scripts/README.md) before relying on their output. Version 1.2.2 clarifies scoped task routes, separates implementation stage from verification, and fixes false-clean helper outcomes.
 
 ## Relationship to design systems
 
@@ -60,4 +60,4 @@ The two skills are complementary:
 - **Visual Asset Pipeline** reasons about and delivers generated or recovered imagery.
 - **Web Motion Director** reasons about how interface elements, imagery, navigation, and scroll should behave through time.
 
-For reference-driven website reconstruction, use both when imagery and animation are material to the result.
+For reference-driven reconstruction, use a suitable available asset skill when imagery is material. Visual Asset Pipeline is an optional companion, not a bundled dependency. Continue with the host's actual authorized tools if it is unavailable.

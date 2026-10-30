@@ -1,13 +1,24 @@
 ---
 name: web-motion-director
 description: Co-design appearance and motion, then implement and verify intentional web animation for websites, web apps, platforms, and reference-driven UI reconstruction. Use alongside graphic-design during substantial frontend creation or polish to establish visual and temporal character, define a product-specific motion language, implement navigation, page transitions, microinteractions, scroll choreography, bounded horizontal chapters, shared-element continuity, optional 3D, responsive motion, reduced-motion behavior, and rendered temporal QA.
-license: MIT
-metadata:
-  version: 1.2.1
-  reviewed: "2026-10-30"
 ---
 
 # Web Motion Director
+
+Package version: 1.2.2. QA review: 31 October 2026. Research dates remain attached to their sources.
+
+## Choose the task route
+
+Read this core, then the guides needed for the actual decision. Do not recursively load every linked study. Follow the user's scope and approved project direction before the skill's default preferences.
+
+| Request | Apply the workflow at this depth |
+| --- | --- |
+| Narrow repair or approved system extension | Preserve the current direction. Inspect and change affected behavior, then recheck it and dependent states. No mandatory three-direction exploration. |
+| Major new direction | Share discovery and visible concept exploration with Graphic Design when available. Prototype a principal sequence early, then implement and verify the chosen result. |
+| Faithful reconstruction | Preserve required resting-state fidelity and demonstrated behavior. Treat unsupported motion as a proposal; do not replace the reference with a default aesthetic. |
+| Critique, storyboard, or handoff | Deliver the requested review or specification. Record runtime checks as NOT RUN; do not expand the task into unrequested implementation. |
+
+Use one shared brief and evidence record across skills. A missing tool changes what can be verified, not what may be claimed. Respect host restrictions; never bypass a blocked browser or runtime through an alternate surface. Continue useful independent work and identify the concrete limit.
 
 ## Outcome
 
@@ -60,13 +71,13 @@ Avoid vague theses such as “smooth and premium.”
 
 ### 4. Explore before converging
 
-For a major new direction, consider at least three materially different approaches, for example:
+For a major new direction, compare at least three plausible visual/temporal approaches to the same brief, using visible roughs and a principal prototype. Examples of broad approaches include:
 
 1. continuity-first with restrained state changes and shared elements
 2. editorial choreography with controlled sticky sections and media progression
 3. immersive spatial or 3D storytelling when the product justifies it
 
-Choose by inspecting aesthetic quality, rhythm, character, task clarity, information hierarchy, accessibility, responsive behavior, feasibility, performance, and product fit. An expressive choice can win on beauty or pleasure. Prototype a principal sequence early and revise the layout and movement together before treating the composition as finished.
+These are possibilities, not a required intensity ladder. Three different object relationships within a small CSS implementation can be stronger alternatives than inventing an unsuitable 3D option. Reuse the companion's exploration instead of making a second set. Choose by inspecting aesthetic quality, rhythm, character, task clarity, information hierarchy, accessibility, responsive behavior, feasibility, performance, and product fit. An expressive choice can win on beauty or pleasure. Prototype a principal sequence early and revise the layout and movement together before treating the composition as finished.
 
 ### 5. Study static and temporal references carefully
 
@@ -174,7 +185,7 @@ At minimum verify relevant desktop and mobile viewports, reduced motion, keyboar
 
 A still screenshot proves only one state. For timing-sensitive motion use video or temporal screenshot sequences where the environment supports it.
 
-Use `scripts/browser_motion_audit.py` as a diagnostic helper when Playwright is available. Read `references/qa-and-debugging.md`.
+Use `scripts/browser_motion_audit.py` only when the host permits that browser runtime and its dependencies are available. It captures static scroll samples; it does not perform interaction tests or normal-speed playback. Read [helper usage and limits](scripts/README.md) and `references/qa-and-debugging.md`.
 
 ### 15. Motion anti-slop review
 
@@ -195,11 +206,9 @@ Before completion ask:
 
 ## Status model
 
-Track substantial work through:
+Track delivery stage separately from verification. Use `specified`, `prototyped`, or `integrated` for the artifact. For temporal, responsive, reduced-motion, input/focus, lifecycle, and performance checks, record `PASS`, `FAIL`, `NOT RUN`, or `N/A` with artifact/version, conditions, method, and evidence. Explain N/A and attach a concrete blocker to NOT RUN when applicable.
 
-`planned -> prototyped -> integrated -> motion-verified -> responsive-verified -> reduced-motion-verified -> performance-verified`
-
-Use `blocked` when missing browser access, unavailable references, unsupported APIs, or inaccessible runtime conditions prevent the next evidence step. Never skip directly from planned to verified.
+Verification is not a single promotion ladder: a local prototype can have tested interactions while integration remains out of scope. Source inspection and isolated logic tests do not establish browser behavior; sampled stills do not establish normal-speed playback. Do not turn an untested condition into a pass because another condition succeeded.
 
 ## Optional authoring tags
 
@@ -207,6 +216,6 @@ A project may use inert JSON planning data inside comments with `<motion-intent>
 
 ## Completion criteria
 
-Substantial motion work is complete only when the product context was inspected, motion opportunities were intentionally selected or rejected, a coherent motion direction exists, the implementation uses a justified stack, interruption and cleanup are handled where relevant, desktop and mobile behavior were inspected, reduced motion was inspected, keyboard/focus still works, actual temporal states were checked, performance risks were reviewed, and the final delivered source follows the project’s normal CI and repository workflow.
+For an implementation request, completion requires the relevant product context, intentional motion choices, justified stack, interruption and cleanup, rendered desktop/mobile and reduced-motion checks, keyboard/focus behavior, temporal inspection, performance-risk review, and the project's required source/CI workflow. Scale these to affected behavior for a small repair. Report unexecuted conditions and deliver an accurately labeled prototype or review draft when material checks remain blocked. A requested specification can be complete as a handoff without claiming those runtime checks.
 
 A passing build is necessary evidence for code health when the project requires it. It is not evidence that the motion looks or feels right.

@@ -1,7 +1,10 @@
 # Web Motion Director Research Register
 
-**Research date:** 2026-09-21  
-**Version:** 1.0.0
+**Original research date:** 2026-09-21
+
+**Original version:** 1.0.0; subsequent updates are dated below.
+
+This is a historical evidence register. Apply the current core workflow when earlier source language conflicts with later owner direction, especially the 30 October refinement allowing beauty and enjoyment as sufficient motion intentions. Historical project guidance is not a hidden dependency on an unavailable `DESIGN.md`.
 
 This register records the sources used to shape the skill. The purpose of the research was not to collect fashionable effects. It was to extract repeatable principles for deciding when motion belongs in a web experience, how to implement it safely, and how to verify it.
 
@@ -116,7 +119,7 @@ Key lesson: scroll can reorganize existing visual relationships. The hero title 
 ### R17. Codrops, The Spark: Engineering an Immersive, Story-First Web Experience
 URL: https://tympanus.net/codrops/2026/01/09/the-spark-engineering-an-immersive-story-first-web-experience/
 
-Key lesson: immersive work should be storyboarded around narrative beats before choosing tools. The project assigns different scroll ranges to different scenes and keeps only one heavy lscene active at a time to manage performance.
+Key lesson: immersive work should be storyboarded around narrative beats before choosing tools. The project assigns different scroll ranges to different scenes and keeps only one heavy scene active at a time to manage performance.
 
 ### R18. Codrops, More Than a Portfolio: Building a Scroll-Driven 3D World with Something to Say
 URL: https://tympanus.net/codrops/2026/04/28/more-than-a-portfolio-building-a-scroll-driven-3d-world-with-something-to-say/
@@ -253,3 +256,13 @@ Version 1.2.1 adds [template-choreography guidance](references/graphic-design-co
 Observed evidence includes repeated visual structures across surface styles, task-specific exceptions, two working local prompt/style controls, and one declared 20-second infinite agency marquee. This does not establish gallery-wide motion, perceived smoothness, reduced-motion compliance, integrated functionality, or performance. No source code implementation, mobile behavior, generation, wallet operation, or backend completion was verified.
 
 Comparing lead objects, stable regions, overlap, repetition, and settlement across design alternatives is our synthesis. Distinguishing a demo from live state and maintaining within-product consistency refine the existing contract. The update does not prescribe a new default aesthetic, prohibit ornament, or claim that style names reveal authorship. Runtime helpers and dependencies are unchanged.
+
+## 31 October 2026: QA and lifecycle refresh
+
+R29. MDN [pagehide](https://developer.mozilla.org/en-US/docs/Web/API/Window/pagehide_event) and [pageshow](https://developer.mozilla.org/en-US/docs/Web/API/Window/pageshow_event), consulted for retained-page lifecycle behavior. A page may return from the back/forward cache; a `pagehide` handler does not prevent that. Page-exit events are not guaranteed on every mobile termination. Persist important drafts during editing, not solely at exit. Documentation establishes event semantics, not the correctness of our examples.
+
+R30. [Playwright Page API](https://playwright.dev/python/docs/api/class-page), consulted for navigation, runtime-error capture, and verification limits. HTTP error responses need explicit status inspection; navigation need not throw. `networkidle` is discouraged for test readiness. The documentation also states that BFCache testing is unsupported and normally disabled. A synthetic lifecycle test or ordinary automated Back action is not evidence of actual cache restoration. Recheck the tool version when applying this guidance.
+
+R6/R7 were rechecked for their separate WCAG levels and conditions. R14 was re-opened at its original practitioner source. This targeted refresh does not revalidate every historical source or establish current browser compatibility.
+
+Version 1.2.2 adds task routing, bounded evidence claims, source-helper regressions, and suspension/return checks. A queue exercise exposed a close-state guard left active after cancellation on `pagehide`. The corrected handlers pass isolated logic checks; real browser restoration is NOT RUN. The instruction to settle or deliberately resume transient UI state is engineering synthesis from that defect and the documented lifecycle. See [the validation record](../../VALIDATION-2026-10-31-QA.md).

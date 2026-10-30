@@ -29,7 +29,7 @@ For a substantial new direction, compare choreography as well as effects: lead o
 
 ## Browser matrix
 
-At minimum for substantial frontend motion:
+For substantial frontend implementation, select relevant conditions from this matrix. A narrow repair checks affected behavior and shared dependencies; a written specification records unexecuted runtime checks without expanding scope:
 
 - narrow mobile;
 - common mobile;
@@ -63,6 +63,7 @@ Check:
 - transition works from normal click;
 - direct destination load works without transition state;
 - back/forward works;
+- leaving during a transition and returning restores a usable state, without stale guards, overlays, focus traps, or body locks;
 - rapid second navigation does not leave overlay or body lock behind;
 - focus lands in an appropriate destination location;
 - route errors cannot leave the viewport covered;
@@ -114,8 +115,13 @@ Use:
 
 - `PASS`: checked and satisfied.
 - `FAIL`: checked and did not satisfy.
-- `BLOCKED`: could not verify because of a concrete limitation.
 - `NOT RUN`: relevant but not executed.
-- `NOT APPLICABLE`: genuinely outside scope.
+- `N/A`: genuinely outside scope, with a reason.
+
+Attach `blocked` and its concrete reason to a NOT RUN check when a capability prevents execution. Keep stage (specified, prototyped, integrated) separate from these results. A prototype can pass a local interaction check without demonstrating a backend operation. Isolated logic tests with fake DOM or browser objects validate only the tested logic and helper contract; they do not replace browser interaction, layout, or timing checks.
+
+For retained-page behavior, record whether a real back/forward cache restoration occurred. Dispatching `pagehide`/`pageshow` or navigating Back in an automation tool does not establish that. Check the tool's current support; the [31 October research note](../RESEARCH.md#31-october-2026-qa-and-lifecycle-refresh) records a relevant Playwright limitation.
+
+The optional [browser sampler](../scripts/README.md) captures static scroll positions. Its normal/reduced contexts do not prove that the two experiences differ appropriately, and its running-animation count is not a frame-rate measurement. Inspect the images and actual sequences separately. Follow host tool policies; an unavailable or blocked runtime is a limitation to report, not permission to bypass it.
 
 Do not write “motion verified” when only typecheck or build ran.

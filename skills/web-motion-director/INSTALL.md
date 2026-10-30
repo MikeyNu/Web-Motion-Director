@@ -21,7 +21,6 @@ A common repository-level layout is:
   SKILL.md
   references/
   scripts/
-  templates/
   ...
 ```
 
@@ -53,14 +52,14 @@ Python helper baseline:
 Python 3.10+
 ```
 
-Optional validation dependencies are listed in:
+Optional dependencies are listed in:
 
 ```text
 requirements.txt
 requirements-optional.txt
 ```
 
-`browser_motion_audit.py` requires Playwright and a browser installation when used.
+`motionctl.py` and the offline regression suite use the standard library. `browser_motion_audit.py` requires Playwright and a browser installation when used. Read [helper usage and exit statuses](scripts/README.md); run it only when the host permits that runtime. A Markdown attachment supplies neither a browser nor permission to install one.
 
 ## Project integration
 

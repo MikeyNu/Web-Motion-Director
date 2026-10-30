@@ -67,6 +67,8 @@ For major work, compare at least three strategies. A useful set is:
 2. **Editorial choreography:** controlled sticky sections, media focus, text and image sequencing.
 3. **Immersive:** deeper scene transitions, WebGL or 3D, sound or camera motion if justified.
 
+This list is illustrative, not a required restrained/editorial/3D ladder. Compare genuinely plausible approaches for the same task; alternatives may all use CSS and differ in object relationships, staging, or sequence. Share visible roughs with the graphic-design workflow. Preserve the approved direction during a narrow repair or scoped feature extension.
+
 Evaluate aesthetic quality, rhythm, character, task clarity, information hierarchy, accessibility, responsive behavior, implementation feasibility, performance, and maintenance. A visually compelling experience is a valid goal. Let a principal motion prototype inform the layout before either is considered complete.
 
 ## Tempo and hierarchy
