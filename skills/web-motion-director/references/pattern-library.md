@@ -1,6 +1,6 @@
 # Motion pattern library
 
-These are patterns, not prescriptions. Select them from product needs.
+These are patterns, not prescriptions. Select them from product needs and desired aesthetic experience. For concrete construction of apertures, shutters, clipped type, drawn accents, shared images, and linked indicators, read [Motion principles and choreography](motion-principles-and-choreography.md). Its source relationships are possibilities, not a compulsory effect list.
 
 ## 1. Shared media handoff
 

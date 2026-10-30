@@ -21,6 +21,8 @@ Good substitutions:
 
 WCAG 2.2 SC 2.2.2 is Level A. Its moving/blinking/scrolling branch requires a way to pause, stop, or hide qualifying information that begins automatically, lasts more than five seconds, and accompanies other content, unless essential. Its auto-updating branch has no five-second exception and also permits control of update frequency. Apply each branch's actual scope. Reduced-motion handling does not replace every required pause/update control. [R7]
 
+A short asset played indefinitely creates long-running motion; apply the requirement to the resulting behavior, not just the source file length. Handle changes to the motion preference while an effect is running and leave a usable composed state.
+
 Examples to review carefully:
 
 - logo marquees;

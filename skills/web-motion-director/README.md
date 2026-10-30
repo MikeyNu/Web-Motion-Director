@@ -11,6 +11,8 @@ The skill teaches an agent to:
 - inspect the product, audience, design system, codebase, and references;
 - decide whether a region should remain static or use feedback, spatial, scroll-linked, narrative, or immersive motion;
 - infer plausible motion from a static reference without pretending the screenshot proves the original animation;
+- study temporal references with timestamped observations and separate interface motion from presentation editing;
+- compose staging, overlap, holds, masks, type, and shared imagery with explicit state and interruption;
 - create a product-specific motion thesis;
 - explore multiple motion directions before committing on major work;
 - design navigation, menu, route, microinteraction, and scroll choreography;
@@ -31,6 +33,7 @@ A static screenshot is treated as evidence of composition only. If no temporal r
 - `SKILL.md`: primary agent workflow
 - `references/`: motion strategy, scrolling, navigation, responsive, accessibility, performance, QA, and case-study guidance
 - `references/graphic-design-coordination.md`: joint visual/temporal design, shared contracts, early prototyping, and reference evidence
+- `references/motion-principles-and-choreography.md`: researched principles, sequence scoring, motion models, and practical visual construction
 - `scripts/motionctl.py`: conservative static motion-risk and plan helper
 - `scripts/browser_motion_audit.py`: optional Playwright temporal sampling helper
 - `RESEARCH.md`: research register
@@ -48,7 +51,7 @@ Web Motion Director is designed to work under a project's existing `DESIGN.md`, 
 
 Use [Graphic Design](https://github.com/MikeyNu/agent-graphic-designer) alongside this skill when creating or redesigning an interface. Follow [the coordination guide](references/graphic-design-coordination.md): compose and prototype together, share one brief, and let playback inform the layout. It is an optional companion, not a hidden runtime dependency or a requirement to use multiple agents.
 
-The 30 October 2026 update establishes this joint workflow and aligns the skills' treatment of aesthetic pleasure. The owner's new UI screenshots were studied in the graphic-design repository. Motion videos are forthcoming; no source timing or choreography from those videos has yet been analyzed.
+The 30 October 2026 updates establish this joint workflow and align the skills' treatment of aesthetic pleasure. The graphic-design repository now holds studies of 39 distinct still references and [nine motion clips](https://github.com/MikeyNu/agent-graphic-designer/blob/main/skills/graphic-design/references/owner-motion-study.md). The clip study uses timestamped frame samples and detailed crops, with explicit limits on playback, trigger, and implementation certainty. Version 1.2.0 applies these observations alongside primary motion guidance and research.
 
 ## Relationship to Visual Asset Pipeline
 

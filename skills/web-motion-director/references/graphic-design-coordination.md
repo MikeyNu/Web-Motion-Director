@@ -29,7 +29,7 @@ Record these once for each principal sequence, or inherit them from a tested com
 | Evidence | Source/timestamps and actual access; distinguish observation from a new design proposal. |
 | Trigger and owner | Input, state, route, time, or scroll progress; system responsible for the state and animated property. |
 | States and anchor | Resting, active/pending, intermediate, settled, failure/cancel; what remains stable. |
-| Choreography | Moving properties, origin, travel, layering, order, overlap, hold, and settlement. |
+| Choreography | Moving properties, origin, travel, crop, layering, order, overlap, hold, first readability, input readiness, and settlement. |
 | Tempo | Candidate duration/easing or measured scroll geometry; provisional until inspected. |
 | Interruption | Reverse, rapid repeat, late async result, resize, route exit, and cleanup. |
 | Alternate conditions | Keyboard/touch, narrow/short viewport, long content, reduced motion, missing assets, failed enhancement. |
@@ -39,6 +39,8 @@ For scroll-linked work, define the mapping from start/end geometry to progress. 
 
 For repeated operational work, responsive control feedback and dependable object continuity can create a lively experience. Settings, record lists, and data entry need not run a cinematic entrance on every update. For an expressive page, prototype coordinated section relationships instead of settling for plain scrolling plus generic fade-ups. Choose based on the actual composition and desired experience, not a universal intensity quota.
 
+Read [Motion principles and choreography](motion-principles-and-choreography.md) when the sequence depends on masks, moving type, linked progress, shared media, or expressive staging. Separate recording time, animation time, user progress, and application state. Give the composition a useful/readable state independently of its decorative finish.
+
 ## State truth and temporal craft
 
 A prompt visual response may begin immediately while a durable action remains pending. Success must follow the operation's actual outcome, not the end of a tween. Prevent stale completion callbacks from changing a newer state. Define how rapid toggles, rejected moves, canceled uploads, and interrupted drawers settle visually and semantically.
@@ -47,7 +49,7 @@ Inspect intermediate contours, clipping, contrast, text readability, and layer i
 
 ## Reference evidence
 
-The owner's current reference expansion consists of still UI images. Their layered cards, illustrative covers, selected records, and aligned settings suggest motion opportunities, but no timing, easing, trigger, or animation library is established. The owner plans to supply motion videos. Do not mark that analysis as completed before the files arrive.
+The owner's references now include 39 distinct still images and nine motion clips. The companion's [timestamped study](https://github.com/MikeyNu/agent-graphic-designer/blob/main/skills/graphic-design/references/owner-motion-study.md) records sampled sequences, detail crops, source identities, and limits. It does not claim continuous playback, source-code inspection, or exact implementation. The clips extend the visual vocabulary without proving that every pictured control works or that all presentation-camera motion belongs in a website.
 
 For video, record file/source identity, duration, dimensions, frame-rate information if available, and access limits. Inspect normal-speed playback and timestamped start/intermediate/settled states. Separate UI movement from presentation-camera motion, cuts, and speed changes. Identify triggers only when supported. If only sampled frames are accessible, report that limitation and do not claim perceived smoothness or an exact easing curve. Transfer relationships into a new prototype rather than copying source assets or asserting its implementation technology.
 

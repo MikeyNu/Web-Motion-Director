@@ -85,8 +85,10 @@ These are starting ranges, not rules. Repeated operational interactions should b
 - Use ease-in for elements intentionally leaving when the exit deserves perception.
 - Use ease-in-out for controlled continuous changes.
 - Use linear progress for scroll-scrubbed mapping unless the experience intentionally remaps progress.
-- Use springs or elastic easing only where the product character supports them.
+- Choose springs for appropriate spatial response and retargeting; tune damping and overshoot separately. A spring does not require visible bounce. Elastic rebound is an expressive choice, not a universal default.
 - Do not use identical easing for every interaction by habit.
+
+These are candidate postures, not hard mappings. A panel that remains conceptually nearby can settle offscreen instead of accelerating away. Choose a curve, spring, or progress model by its actual response. Read [Motion principles and choreography](motion-principles-and-choreography.md) for the four clocks, sequence scoring, construction, and evidence. Initial feedback, input readiness, and decorative completion need not share one deadline.
 
 ## Stable anchors
 

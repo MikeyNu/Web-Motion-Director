@@ -8,6 +8,8 @@ Design appearance and motion together. Beauty, atmosphere, rhythm, play, feedbac
 
 When a static screenshot or image is the reference, preserve required resting-state fidelity while designing the temporal relationship. Label added motion as a proposal and do not claim that a still image proves original timing, easing, page transitions, hover states, or scroll behavior. For video, inspect normal-speed playback and timestamped events; distinguish interface motion from presentation edits and report playback limits.
 
+Read `references/motion-principles-and-choreography.md` for sequence scoring and construction. Distinguish recording time, animation time, user progress, and application state. Specify first readability and input readiness separately from visual settlement; decorative finish must not fabricate success or gate the only route to usable content.
+
 Motion should be intentional across navigation, menus, page transitions, microinteractions, and scrolling. Bounded vertical-to-horizontal sections are allowed when the content relationship justifies them: preserve native vertical scroll input, pin only for the chapter, move an inner horizontal track, let users reverse naturally, then return to ordinary vertical flow. Use a different mobile and reduced-motion composition where needed.
 
 Use the lightest suitable implementation. Prefer existing project conventions. Do not add GSAP, Motion, Three.js, a smooth-scroll engine, or a custom router merely because the tool exists. Never run multiple scroll owners without a demonstrated reason.

@@ -3,7 +3,7 @@ name: web-motion-director
 description: Co-design appearance and motion, then implement and verify intentional web animation for websites, web apps, platforms, and reference-driven UI reconstruction. Use alongside graphic-design during substantial frontend creation or polish to establish visual and temporal character, define a product-specific motion language, implement navigation, page transitions, microinteractions, scroll choreography, bounded horizontal chapters, shared-element continuity, optional 3D, responsive motion, reduced-motion behavior, and rendered temporal QA.
 license: MIT
 metadata:
-  version: 1.1.0
+  version: 1.2.0
   reviewed: "2026-10-30"
 ---
 
@@ -68,13 +68,15 @@ For a major new direction, consider at least three materially different approach
 
 Choose by inspecting aesthetic quality, rhythm, character, task clarity, information hierarchy, accessibility, responsive behavior, feasibility, performance, and product fit. An expressive choice can win on beauty or pleasure. Prototype a principal sequence early and revise the layout and movement together before treating the composition as finished.
 
-### 5. Handle static references carefully
+### 5. Study static and temporal references carefully
 
 Inspect the resting composition and its visual relationships while developing motion. Observe overlaps, crops, repeated objects, depth cues, masks, visual bridges, off-screen continuation, and section geometry. Preserve required reference fidelity, but do not postpone motion design until the whole layout is locked. Propose a coherent direction suited to the composition and desired experience; the smallest effect is not automatically the strongest choice.
 
 Do not claim exact easing, duration, page transitions, hover behavior, pinning, or animation order from a single still image. When video, Figma motion, source code, or temporal states exist, prefer that evidence.
 
-Read `references/reference-motion-inference.md` for reference-driven work.
+For clips, map the onset, overlap, readable state, visible controls, hold, and settlement. Record input readiness only when demonstrated. Separate interface behavior from footage, mockup-camera movement, editing, and recording speed. Do not infer an exact curve, library, or scroll mechanism from appearance. Record sampled-frame limitations if normal playback is unavailable.
+
+Read [Reference inference](references/reference-motion-inference.md) for the evidence protocol and [Motion principles and choreography](references/motion-principles-and-choreography.md) for staging, overlap, springs, masks, type, shared imagery, and linked progress. Distinguish recording time, elapsed animation, user progress, and application state. The new guide links the owner's nine-clip study; it also works without those external files.
 
 ### 6. Design scroll choreography intentionally
 
@@ -111,7 +113,7 @@ Good candidates include hover/focus indication, press and selected state, disclo
 
 A subtle material response, illustration reaction, or playful contour may belong for pleasure as well as state. Design its active, intermediate, and settled appearance with the element. Keep targets stable, provide keyboard/touch access, and distinguish immediate visual feedback from confirmed operation success. Handle rapid repeat input and late async results without stale state changes.
 
-Keep frequent operational interactions fast. Avoid bouncy or springy motion by default in serious enterprise, clinical, finance, or civic surfaces unless brand evidence supports it.
+Keep frequent operational interactions responsive. A well-damped spring can suit a serious interface; spring physics and visible bounce are different choices. Select overshoot from the object and identity, and keep bounded effects such as opacity within their meaningful range. Do not delay control readiness or truthful state feedback for decorative settlement.
 
 ### 9. Choose implementation technology from the problem
 
@@ -166,7 +168,7 @@ Lazy-load heavy systems, pause off-screen work, cap graphical cost on constraine
 
 ### 14. Verify motion through time
 
-For non-trivial motion inspect start, early motion, midpoint, near completion, resting state, reverse behavior, and interruption where applicable. For scroll-linked work sample representative scroll positions.
+For non-trivial motion inspect start, early motion, midpoint, near completion, resting state, reverse behavior, and interruption where applicable. Check mask seams, image focal points, text clipping, first readability, input readiness, and loop boundaries when relevant. For scroll-linked work sample representative scroll positions.
 
 At minimum verify relevant desktop and mobile viewports, reduced motion, keyboard and focus behavior, console errors, horizontal overflow, direct route entry, back/forward when routes are involved, and lifecycle cleanup.
 

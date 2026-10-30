@@ -5,6 +5,18 @@
 
 This register records the sources used to shape the skill. The purpose of the research was not to collect fashionable effects. It was to extract repeatable principles for deciding when motion belongs in a web experience, how to implement it safely, and how to verify it.
 
+## Contents
+
+- [Research conclusions](#research-conclusions)
+- [Primary and authoritative sources](#primary-and-authoritative-sources)
+- [Case studies and practitioner evidence](#recent-case-studies-and-practitioner-evidence)
+- [Project-specific rules](#project-specific-design-rules-incorporated)
+- [Technology selection](#technology-selection-findings)
+- [Anti-patterns](#anti-patterns-identified-during-research)
+- [Research limitations](#research-limitations)
+- [Joint UI and motion update](#30-october-2026-joint-ui-and-motion-design)
+- [Motion principles research](#30-october-2026-motion-principles-research)
+
 ## Research conclusions
 
 The strongest common finding is that effective web motion is contextual. Motion should communicate state, continuity, hierarchy, feedback, spatial relationships, narrative progression, or brand character. A technically impressive transition can still be worse than a simple one if it competes with the content.
@@ -184,6 +196,52 @@ The skill explicitly protects against these common failures:
 
 Version 1.1.0 responds to the owner's request to coordinate this skill with [Graphic Design](https://github.com/MikeyNu/agent-graphic-designer). The refinement is owner direction and original design synthesis. It allows beauty, atmosphere, play, and enjoyment as sufficient intentions, replaces a blanket preference for the smallest effect, and requires early shared composition/sequence work. These instructions refine earlier restrictive language about decoration; they do not claim that the historical sources empirically validated every expressive choice.
 
-The graphic-design repository records the owner's second still-image set: 20 uploads, 19 distinct images, plus observations and proposed motion opportunities. No motion videos were supplied for this update. Exact source timing, easing, triggers, animation technology, and human response remain unknown. The new coordination guide defines how future videos will be inspected and how sampled frames differ from full playback evidence.
+The graphic-design repository records the owner's second still-image set: 20 uploads, 19 distinct images, plus observations and proposed motion opportunities. No motion videos had been supplied at that stage, version 1.1.0. The subsequent video study below adds temporal evidence with its own limits. Exact source easing, animation technology, and human response remain unknown.
 
 Direct publisher retrieval on 30 October 2026 rechecked R5 rendering guidance, R6's criterion/level, and R7's separate movement/update conditions. Search-service attempts returned errors, but direct retrieval and relevant text inspection succeeded. This targeted check does not refresh every historical source or establish current library/browser compatibility. Implementation work must verify the APIs it actually uses.
+
+## 30 October 2026: motion principles research
+
+Version 1.2.0 adds [Motion principles and choreography](references/motion-principles-and-choreography.md). The following sources were consulted on 30 October 2026. Platform recommendations, technical documentation, empirical findings, and our design synthesis have different authority. No source establishes one ideal duration, one aesthetic, or the implementation of the owner's clips.
+
+### R23. Carbon Design System, Motion
+URL: https://www.carbondesignsystem.com/building-blocks/foundations/motion/overview
+
+Official design-system guidance, page updated 12 August 2026. Supports differentiating productive/expressive moments, coordinating components at page level, and considering travel and size when choosing timing. Its entrance, exit, and visible-to-visible guidance includes contextual exceptions. Exact curves, durations, and IBM's restrictions on ornament are scoped design choices, not universal laws. Text inspected; interactive examples were not played.
+
+### R24. Material Design 3, Motion
+URL: https://m3.material.io/styles/motion
+API corroboration: https://developer.android.com/reference/kotlin/androidx/compose/material3/MotionScheme
+
+Official platform guidance distinguishes standard/expressive spring schemes and spatial/effects tokens. It supports separating spatial overshoot from color/opacity changes. Springs have stiffness, damping, and initial velocity; visible bounce is not inherent to every spring response. Official indexed text and API documentation were inspected because the direct design page required JavaScript. Embedded demonstrations were not played. Native token details do not establish arbitrary web-library semantics or a requirement to use Material styling.
+
+### R25. Apple Human Interface Guidelines, Motion
+URL: https://developer.apple.com/design/human-interface-guidelines/motion
+
+Official guidance supports predictable directional feedback, brief response to frequent input, optional motion, and cancellation without waiting for completion. Official indexed text was inspected; the direct page returned a JavaScript shell. Platform-specific game and immersive guidance is not automatically a web requirement. These recommendations do not prohibit expressive visual art direction.
+
+### R26. Android Developers, Quick guide to Animations in Compose
+URL: https://developer.android.com/develop/ui/compose/animation/quick-guide
+
+Primary implementation documentation. Relevant sections distinguish spring, tween, keyframes, sequential/concurrent animation, shared transition state, and re-entry behavior. It describes Compose spring interruption using current velocity. Inspected text, not executed native examples. This supports the model distinction; other frameworks' cancellation and velocity semantics must be checked independently.
+
+### R27. Heer and Robertson, Animated Transitions in Statistical Data Graphics
+Author page: https://idl.uw.edu/papers/animated-transitions
+Paper: https://idl.cs.washington.edu/files/2007-AnimatedTransitions-InfoVis.pdf
+
+IEEE TVCG / InfoVis, 2007. Abstract, experimental descriptions, discussion, and conclusion were inspected. Two experiments with 24 participants compared static, animated, and staged transitions for object tracking and change estimation. Animation helped in the examined tasks; simple staging had benefits, while some complex staging increased error. These results concern specific chart transitions, not marketing conversion, every UI, or a universal timing scale. No independent replication was performed.
+
+### R28. Nielsen Norman Group, Executing UX Animations: Duration and Motion Characteristics
+URL: https://www.nngroup.com/articles/animation-duration/
+
+Page Laubheimer, 9 February 2020. Practitioner guidance helps distinguish trigger, changing properties, duration, and easing, with duration considered in context. Inspected article text. Treat numerical recommendations as design starting points, not a measured law for every distance, device, or repeated task.
+
+### Targeted refresh of existing technical sources
+
+R5's rendering guidance and R6/R7's separate accessibility scopes were rechecked at their official URLs. R9's current MDN guide, https://developer.mozilla.org/en-US/docs/Web/CSS/Guides/Scroll-driven_animations, distinguishes elapsed-time and scroll/view progress timelines. Text inspection supports the mechanism distinction; it does not establish current support across a project's target browsers. Refresh APIs and compatibility when implementing.
+
+### Owner clips and original synthesis
+
+The companion's [nine-clip study](https://github.com/MikeyNu/agent-graphic-designer/blob/main/skills/graphic-design/references/owner-motion-study.md) records file hashes, nominal metadata, timestamps, close observations, interpretations, plausible constructions, and adaptation limits. The 199 overview selections, 395 dense selections across 26 windows, and seven detail crops were inspected. Continuous normal-speed playback, audio, source code, live controls, actual device performance, and participant reactions were not evaluated.
+
+The four-clock distinction, readable/usable/settled milestones, construction recipes, creative critique, and transfer exercises are original synthesis. The clips support observed relationships such as masks, overlap, object continuity, and coordinated progress; they do not prove creator intent, exact easing, a particular library, or general UX efficacy. Beauty and pleasure remain valid intentions without borrowed scientific certainty. No third-party clip or extracted frame is redistributed in the package.

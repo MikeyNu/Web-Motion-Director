@@ -19,6 +19,12 @@ For a non-trivial animation inspect:
 
 For scroll-linked work, sample representative scroll positions instead of waiting fixed times.
 
+## Visual craft and readiness
+
+Inspect normal-speed playback before diagnosing individual frames. Check the onset, overlap, maximum occlusion, first readable state, input readiness, and final settlement. For masks and slices, inspect crop alignment, seams, fractional sizing, and resized states. For typography, check wrapping, font loading, glyph clipping, intermediate contrast, and duplicated accessible names. For shared objects, check subject/focal-point continuity and return geometry. For loops, inspect the ending-to-starting boundary and any intended velocity continuity.
+
+Repeat the interaction several times. Check mid-flight reversal, a new selection, late data, skipped introduction, failed media, and a motion-preference change while active. Confirm the interface remains usable if an animation completion event never fires. Separate storyboard/specification review, sampled source evidence, rendered temporal QA, and actual performance measurement.
+
 ## Browser matrix
 
 At minimum for substantial frontend motion:

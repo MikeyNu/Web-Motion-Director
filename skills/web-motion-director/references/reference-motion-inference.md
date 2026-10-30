@@ -1,4 +1,4 @@
-# Motion inference from static references
+# Motion evidence from static and temporal references
 
 ## Core rule
 
@@ -78,6 +78,14 @@ Motion enhancement must not damage static parity. At the reference viewport:
 - confirm that the final resting composition still matches the reference where required;
 - ensure clipping, masks, and z-index behavior remain correct;
 - verify that responsive changes do not expose hidden reference artifacts.
+
+## Temporal reconstruction worksheet
+
+For each principal sequence, record source identity and nominal media metadata, approximate source timestamps, visual layers, stable anchors, order/overlap/hold, supported input, uncertainties, and a proposed implementation. Classify movement inside footage separately from movement of its container. A rotating tablet, tilted page sheet, or showcase zoom is not automatically part of the product.
+
+Record first readability, visible controls, and visual settlement separately; a visible control does not establish input readiness unless an interaction demonstrates it. Exact frame timestamps locate samples; they do not locate the original onset more precisely than the sampling interval. Increase sampling around clipping, crossing, or reversal; inspect source-resolution crops when details matter. Do not infer smoothness from contact sheets or production performance from recording frame rate.
+
+See the [owner's nine-clip study](https://github.com/MikeyNu/agent-graphic-designer/blob/main/skills/graphic-design/references/owner-motion-study.md) for a completed example with explicit limits. Use [Motion principles and choreography](motion-principles-and-choreography.md) to turn observations into an independent construction. Preserve a source's actual behavior only when faithful reconstruction is requested; inspired adaptation can change the mechanism.
 
 ## Reporting language
 
