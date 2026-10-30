@@ -34,6 +34,8 @@ node evals/qa-2026-10-31/verify.cjs
 
 CI configuration runs the Python suite on pushes and pull requests. The results above are locally executed evidence; a configured workflow is not a completed hosted run. The companion's 45 repository tests bring the two-package total to 72. Do not combine that count with browser verification or treat each assertion as an independent design trial.
 
+After publication, [GitHub run 41146233823](https://github.com/MikeyNu/Web-Motion-Director/actions/runs/41146233823) reported failure before any test steps. No runner was assigned and no job log was available. Check annotations were unavailable through the connector, so the cause is unconfirmed. The companion's new hosted run also failed before test steps, and its preceding revision already had a failed run. Hosted CI is not passing; investigate the run details before claiming hosted execution. The published source tree matches the locally tested version.
+
 ## Limits
 
 The allowed browser preview rejected the local target and prohibited alternate routes. Browser layout, actual keyboard/Tab/focus, native dialog/history behavior, real BFCache restoration, screen readers, normal-speed animation, temporal frames, device tests, and measured performance are **NOT RUN**. The corrected HTML is a review prototype with source/logic evidence, not a production-readiness claim. Fresh exercises demonstrate scoped transfer, not statistical reliability or infallibility.
