@@ -3,7 +3,7 @@ name: web-motion-director
 description: Co-design appearance and motion, then implement and verify intentional web animation for websites, web apps, platforms, and reference-driven UI reconstruction. Use alongside graphic-design during substantial frontend creation or polish to establish visual and temporal character, define a product-specific motion language, implement navigation, page transitions, microinteractions, scroll choreography, bounded horizontal chapters, shared-element continuity, optional 3D, responsive motion, reduced-motion behavior, and rendered temporal QA.
 license: MIT
 metadata:
-  version: 1.2.0
+  version: 1.2.1
   reviewed: "2026-10-30"
 ---
 
@@ -177,6 +177,8 @@ A still screenshot proves only one state. For timing-sensitive motion use video 
 Use `scripts/browser_motion_audit.py` as a diagnostic helper when Playwright is available. Read `references/qa-and-debugging.md`.
 
 ### 15. Motion anti-slop review
+
+Use the [template-choreography review](references/graphic-design-coordination.md#prevent-template-choreography) to compare temporal structure as well as surface style. Keep demonstrations distinct from live feedback and equivalent controls consistent within the product.
 
 Before completion ask:
 

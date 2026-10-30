@@ -47,6 +47,20 @@ A prompt visual response may begin immediately while a durable action remains pe
 
 Inspect intermediate contours, clipping, contrast, text readability, and layer intersections. Keep hit areas stable. Coordinate hover, layout, and scroll transforms so they do not overwrite one another. Preserve focus and keyboard/touch access; an equivalent alternative need not copy the same animation.
 
+## Prevent template choreography
+
+A named style, palette, animation library, or spring preset is vocabulary, not a motion concept. For substantial new work, use the chosen product/content relationships to decide what leads, what stays stable, what follows, what can overlap, and where the sequence ends. Do not animate a generic layout into seeming specific.
+
+1. Distinguish marketing demonstration, actual application feedback, and ambient expression. A scripted typing sample or chart loop can explain a product when clearly presented as a demo. It must not impersonate live generation, actual progress, real business figures, or a completed operation.
+2. Compare temporal structure across the concept alternatives. If all use the same staggered entrance, floating tiles, count-up, and closing wipe, changing colors or easing has not created another direction. Explore a different object relationship or sequence, not merely more effects.
+3. Plan attention across the page. Name a focal region and quiet support for each significant moment. Ambient motion can be beautiful, but should not continually compete with reading, focus, or repeated work. Give loops deliberate boundaries, replay behavior, and applicable pause/reduced-motion handling.
+4. Preserve consistent feedback for equivalent controls within a product. Do not randomize button responses or force every section to behave differently. On a narrow repair, retain the approved language and fix the affected behavior.
+5. Inspect the principal expressive sequence and a frequent ordinary action at normal speed. Compare their useful/readable state, input readiness, settlement, and repeat behavior. If the composition itself is interchangeable, return to the shared visual brief before tuning durations.
+
+The companion's [UUPM study](https://github.com/MikeyNu/agent-graphic-designer/blob/main/skills/graphic-design/references/template-convergence-study.md) compared 39 gallery previews and twelve full-page compositions. It found recurring visual structures across varied surface styles and also useful exceptions. It did not establish identical animations across the gallery. These motion checks are our design synthesis, not recovered implementation details or a blanket rejection of the examples.
+
+Retain expressive typography, imagery, material, and ornament when they strengthen the actual composition. Replacing a repeated template with obligatory austerity, giant serif type, arbitrary asymmetry, or perpetual cinematic motion is another formula.
+
 ## Reference evidence
 
 The owner's references now include 39 distinct still images and nine motion clips. The companion's [timestamped study](https://github.com/MikeyNu/agent-graphic-designer/blob/main/skills/graphic-design/references/owner-motion-study.md) records sampled sequences, detail crops, source identities, and limits. It does not claim continuous playback, source-code inspection, or exact implementation. The clips extend the visual vocabulary without proving that every pictured control works or that all presentation-camera motion belongs in a website.

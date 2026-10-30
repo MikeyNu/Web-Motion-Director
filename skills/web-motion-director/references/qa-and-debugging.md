@@ -25,6 +25,8 @@ Inspect normal-speed playback before diagnosing individual frames. Check the ons
 
 Repeat the interaction several times. Check mid-flight reversal, a new selection, late data, skipped introduction, failed media, and a motion-preference change while active. Confirm the interface remains usable if an animation completion event never fires. Separate storyboard/specification review, sampled source evidence, rendered temporal QA, and actual performance measurement.
 
+For a substantial new direction, compare choreography as well as effects: lead object, stable region, overlap, first readability, input readiness, repeat behavior, and end condition. Verify a principal expressive sequence and a frequent ordinary action. Check that demonstrated typing, numbers, progress, and completion are distinguishable from live state. Keep equivalent controls coherent; structural variety is not a quota for different animations. See [template choreography](graphic-design-coordination.md#prevent-template-choreography).
+
 ## Browser matrix
 
 At minimum for substantial frontend motion:
