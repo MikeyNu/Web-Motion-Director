@@ -45,12 +45,12 @@ Used for performance guidance: prefer transform and opacity where practical, ins
 ### R6. W3C, Understanding Success Criterion 2.3.3: Animation from Interactions
 URL: https://www.w3.org/WAI/WCAG22/Understanding/animation-from-interactions
 
-Used for reduced-motion requirements and the documented vestibular risks of unnecessary motion triggered by interaction or scrolling.
+Used for the Level AAA ability to disable nonessential interaction-triggered animation and the documented vestibular risks. Respecting reduced-motion preferences is also a design standard of this skill, not a claim that this particular criterion is AA.
 
 ### R7. W3C, Understanding Success Criterion 2.2.2: Pause, Stop, Hide
 URL: https://www.w3.org/WAI/WCAG22/Understanding/pause-stop-hide
 
-Used for continuously moving, blinking, scrolling, or auto-updating content that runs for more than five seconds alongside other content.
+Used for the Level A control requirements for qualifying movement and automatic updates. The more-than-five-second condition belongs to the moving/blinking/scrolling branch; automatic updates have no five-second exception and may allow frequency control. Apply the criterion's separate conditions and essential exceptions.
 
 ### R8. MDN, View Transition API
 URL: https://developer.mozilla.org/en-US/docs/Web/API/View_Transition_API
@@ -179,3 +179,11 @@ The skill explicitly protects against these common failures:
 - Practitioner case studies describe individual projects and are not controlled usability studies.
 - Browser APIs and support levels can change, so compatibility must be checked when implementing a real project.
 - The skill does not encode a fixed visual style. Its purpose is to improve motion reasoning, not to reproduce any referenced site’s recognizable identity.
+
+## 30 October 2026: joint UI and motion design
+
+Version 1.1.0 responds to the owner's request to coordinate this skill with [Graphic Design](https://github.com/MikeyNu/agent-graphic-designer). The refinement is owner direction and original design synthesis. It allows beauty, atmosphere, play, and enjoyment as sufficient intentions, replaces a blanket preference for the smallest effect, and requires early shared composition/sequence work. These instructions refine earlier restrictive language about decoration; they do not claim that the historical sources empirically validated every expressive choice.
+
+The graphic-design repository records the owner's second still-image set: 20 uploads, 19 distinct images, plus observations and proposed motion opportunities. No motion videos were supplied for this update. Exact source timing, easing, triggers, animation technology, and human response remain unknown. The new coordination guide defines how future videos will be inspected and how sampled frames differ from full playback evidence.
+
+Direct publisher retrieval on 30 October 2026 rechecked R5 rendering guidance, R6's criterion/level, and R7's separate movement/update conditions. Search-service attempts returned errors, but direct retrieval and relevant text inspection succeeded. This targeted check does not refresh every historical source or establish current library/browser compatibility. Implementation work must verify the APIs it actually uses.

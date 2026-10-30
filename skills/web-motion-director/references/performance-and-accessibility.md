@@ -4,6 +4,8 @@
 
 Respect `prefers-reduced-motion: reduce` for non-essential spatial motion. [R6]
 
+SC 2.3.3 is Level AAA. Respecting reduced-motion preferences is also this skill's design standard; do not describe that specific criterion as an AA requirement or a complete accessibility check.
+
 Do not merely reduce duration to almost zero while preserving large travel, zoom, parallax, or camera movement. Replace the effect with an equivalent state change.
 
 Good substitutions:
@@ -17,7 +19,7 @@ Good substitutions:
 
 ## Continuous motion
 
-WCAG guidance requires controls for moving, blinking, scrolling, or auto-updating content that starts automatically, lasts longer than five seconds, and runs in parallel with other content unless it is essential. [R7]
+WCAG 2.2 SC 2.2.2 is Level A. Its moving/blinking/scrolling branch requires a way to pause, stop, or hide qualifying information that begins automatically, lasts more than five seconds, and accompanies other content, unless essential. Its auto-updating branch has no five-second exception and also permits control of update frequency. Apply each branch's actual scope. Reduced-motion handling does not replace every required pause/update control. [R7]
 
 Examples to review carefully:
 

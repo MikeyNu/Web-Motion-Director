@@ -4,7 +4,7 @@
 
 A screenshot proves a resting composition. It does not prove how the original page animated.
 
-When reconstructing from a still image, preserve visual fidelity first and treat motion as a proposed enhancement unless video, prototype data, Figma motion, source code, or another temporal reference is available.
+When reconstructing from a still image, preserve required visual fidelity and treat motion as a proposal unless video, prototype data, Figma motion, source code, or another temporal reference is available. Consider appearance and motion together; checking the resting state does not require postponing all temporal design until the layout is finished.
 
 ## What can be observed
 
@@ -42,8 +42,8 @@ Do not present these as known from one screenshot:
 1. Use actual motion evidence if supplied.
 2. Inspect existing source if the reference comes from a current codebase.
 3. Reuse known design-system motion patterns if the product already has them.
-4. Infer the smallest product-specific motion that improves the static composition.
-5. Keep the page static if motion would be arbitrary.
+4. Propose a coherent motion direction from the visual relationships and desired experience, including beauty or enjoyment. Do not automatically equate smallest with best.
+5. Prototype the principal sequence and compare its actual effect. Keep quiet regions where they strengthen the whole; avoid applying the same animation to every region.
 
 ## Plausible mappings
 
@@ -68,6 +68,8 @@ If the same image or object is clearly present on a listing and detail route, sh
 A section title that visually anchors a cluster of content can remain sticky while its associated items progress. Verify that the title does not obscure focus or reading on smaller screens.
 
 ## Verification against reference
+
+For temporal sources, inspect normal-speed playback and timestamped onset, intermediate, and settled states. Record supported inputs and uncertainty. Distinguish product animation from camera movement, editing cuts, and speed changes. Sampled frames alone do not establish smoothness or exact easing. Use the [joint reference protocol](graphic-design-coordination.md#reference-evidence); do not invent measurements or implementation technology from appearance.
 
 Motion enhancement must not damage static parity. At the reference viewport:
 

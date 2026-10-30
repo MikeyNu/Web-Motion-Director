@@ -1,23 +1,25 @@
 ---
 name: web-motion-director
-description: Design, implement, and verify intentional web motion for websites, web apps, platforms, and reference-driven UI reconstruction. Use during substantial frontend creation or polish to decide whether motion is useful, define a product-specific motion language, implement navigation, page transitions, microinteractions, scroll choreography, bounded horizontal chapters, shared-element continuity, optional 3D, responsive motion, reduced-motion behavior, and rendered temporal QA.
+description: Co-design appearance and motion, then implement and verify intentional web animation for websites, web apps, platforms, and reference-driven UI reconstruction. Use alongside graphic-design during substantial frontend creation or polish to establish visual and temporal character, define a product-specific motion language, implement navigation, page transitions, microinteractions, scroll choreography, bounded horizontal chapters, shared-element continuity, optional 3D, responsive motion, reduced-motion behavior, and rendered temporal QA.
 license: MIT
 metadata:
-  version: 1.0.0
-  reviewed: "2026-09-21"
+  version: 1.1.0
+  reviewed: "2026-10-30"
 ---
 
 # Web Motion Director
 
 ## Outcome
 
-Make motion a deliberate part of interface design instead of an afterthought. The goal is not to maximize animation. Decide where motion improves comprehension, continuity, hierarchy, feedback, narrative, spatial understanding, demonstration, or brand character. A correct outcome can be intentionally static.
+Make motion a deliberate part of interface design from the moment its elements are composed. Develop appearance and movement together, including transitions, hover/focus, reveals, scrolling, and state feedback. Comprehension, continuity, narrative, spatial understanding, beauty, atmosphere, play, and enjoyment are legitimate intentions. Judge the actual experience; neither constant movement nor automatic restraint is the goal. An intentionally quiet region can support an expressive one.
+
+For substantial creation or redesign, read [Graphic-design coordination](references/graphic-design-coordination.md) before fixing the composition. Use one shared brief and prototype with the available graphic-design skill. The guide remains usable without that companion and does not imply tool access or require multiple agents.
 
 ## Non-negotiable rules
 
 1. Follow host, repository, design-system, accessibility, architecture, and CI instructions before this skill.
 2. Inspect the actual product, audience, routes, components, assets, design rules, current animation stack, target devices, and performance constraints before adding motion.
-3. Motion must have a job. Do not animate merely because an element entered the viewport, because a library is installed, or because a page feels empty.
+3. Give motion a considered visual or interaction intention. Beauty, pleasure, atmosphere, and character are sufficient intentions without invented productivity claims. Do not apply an identical entrance recipe merely because a library is installed or every element can be animated.
 4. Preserve usability, reading order, navigation, keyboard focus, touch behavior, browser history, and normal scrolling expectations.
 5. Treat a static reference image as evidence of composition, not evidence of historical motion. If no temporal reference exists, motion is a design proposal.
 6. Prefer one coherent motion language over unrelated effects scattered across sections.
@@ -64,11 +66,11 @@ For a major new direction, consider at least three materially different approach
 2. editorial choreography with controlled sticky sections and media progression
 3. immersive spatial or 3D storytelling when the product justifies it
 
-Choose based on task clarity, information hierarchy, brand specificity, accessibility, responsive behavior, implementation feasibility, performance, maintainability, and product fit rather than spectacle.
+Choose by inspecting aesthetic quality, rhythm, character, task clarity, information hierarchy, accessibility, responsive behavior, feasibility, performance, and product fit. An expressive choice can win on beauty or pleasure. Prototype a principal sequence early and revise the layout and movement together before treating the composition as finished.
 
 ### 5. Handle static references carefully
 
-Reconstruct the resting composition accurately first. Observe overlaps, crops, repeated objects, depth cues, masks, visual bridges, off-screen continuation, and section geometry. Infer only the smallest product-specific motion that improves the composition.
+Inspect the resting composition and its visual relationships while developing motion. Observe overlaps, crops, repeated objects, depth cues, masks, visual bridges, off-screen continuation, and section geometry. Preserve required reference fidelity, but do not postpone motion design until the whole layout is locked. Propose a coherent direction suited to the composition and desired experience; the smallest effect is not automatically the strongest choice.
 
 Do not claim exact easing, duration, page transitions, hover behavior, pinning, or animation order from a single still image. When video, Figma motion, source code, or temporal states exist, prefer that evidence.
 
@@ -103,9 +105,11 @@ Menus must be interruptible. Opening then immediately closing should reverse or 
 
 Preserve direct route entry, browser back/forward, real URLs, scroll restoration intent, and error recovery. Read `references/navigation-and-transitions.md`.
 
-### 8. Add microinteractions only where they communicate state
+### 8. Design microinteractions for response and character
 
 Good candidates include hover/focus indication, press and selected state, disclosure, validation, drag affordance, loading/completion, filtering/sorting continuity, gallery selection, dialogs, drawers, and direct manipulation.
+
+A subtle material response, illustration reaction, or playful contour may belong for pleasure as well as state. Design its active, intermediate, and settled appearance with the element. Keep targets stable, provide keyboard/touch access, and distinguish immediate visual feedback from confirmed operation success. Handle rapid repeat input and late async results without stale state changes.
 
 Keep frequent operational interactions fast. Avoid bouncy or springy motion by default in serious enterprise, clinical, finance, or civic surfaces unless brand evidence supports it.
 
@@ -174,7 +178,7 @@ Use `scripts/browser_motion_audit.py` as a diagnostic helper when Playwright is 
 
 Before completion ask:
 
-- Does every major animation have a product or interaction rationale?
+- Does each major animation have a considered visual, emotional, narrative, or interaction intention?
 - Did we apply the same fade-up reveal everywhere?
 - Did we add parallax merely because the composition has layers?
 - Is smooth scrolling solving a real problem?
@@ -183,7 +187,7 @@ Before completion ask:
 - Is any animation competing with reading?
 - Did mobile inherit a desktop interaction that no longer makes sense?
 - Is reduced motion materially different?
-- Would removing an animation make the interface clearer? If yes, remove or redesign it.
+- Does the sequence improve the whole experience? Compare a quieter alternative when useful, and preserve the expressive version when it adds beauty, character, or pleasure without an unresolved defect.
 
 ## Status model
 

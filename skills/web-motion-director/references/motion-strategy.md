@@ -15,8 +15,9 @@ Every substantial animation should primarily serve one or more roles:
 - **Narrative:** establish sequence, reveal causal relationships, or control pacing.
 - **Demonstration:** show how a product, process, or interaction behaves.
 - **Brand character:** make motion feel specific to the identity when it does not compete with the task.
+- **Aesthetic experience:** create beauty, rhythm, atmosphere, surprise, or play. A measured functional benefit is not required.
 
-If the proposed motion cannot name a useful role, keep the region static.
+Explore the actual sequence before deciding that restraint or expression is stronger. Avoid automatic animation recipes, but do not require a functional metaphor for ornament. Read [Graphic-design coordination](graphic-design-coordination.md) and plan movement while composing the interface.
 
 ## Surface posture
 
@@ -66,7 +67,7 @@ For major work, compare at least three strategies. A useful set is:
 2. **Editorial choreography:** controlled sticky sections, media focus, text and image sequencing.
 3. **Immersive:** deeper scene transitions, WebGL or 3D, sound or camera motion if justified.
 
-Do not select based on spectacle alone. Evaluate task clarity, information hierarchy, brand specificity, accessibility, responsive behavior, implementation feasibility, performance, and maintenance.
+Evaluate aesthetic quality, rhythm, character, task clarity, information hierarchy, accessibility, responsive behavior, implementation feasibility, performance, and maintenance. A visually compelling experience is a valid goal. Let a principal motion prototype inform the layout before either is considered complete.
 
 ## Tempo and hierarchy
 

@@ -22,7 +22,7 @@ The skill teaches an agent to:
 
 ## Important behavior
 
-The skill is intentionally allowed to conclude that animation is unnecessary. Its purpose is not to maximize movement.
+The skill designs appearance and motion together, with room for beauty, play, atmosphere, and enjoyment as well as functional response. Quiet regions can support expressive moments. Neither maximum movement nor the smallest possible effect is a universal goal.
 
 A static screenshot is treated as evidence of composition only. If no temporal reference exists, any added motion is explicitly a design proposal.
 
@@ -30,6 +30,7 @@ A static screenshot is treated as evidence of composition only. If no temporal r
 
 - `SKILL.md`: primary agent workflow
 - `references/`: motion strategy, scrolling, navigation, responsive, accessibility, performance, QA, and case-study guidance
+- `references/graphic-design-coordination.md`: joint visual/temporal design, shared contracts, early prototyping, and reference evidence
 - `scripts/motionctl.py`: conservative static motion-risk and plan helper
 - `scripts/browser_motion_audit.py`: optional Playwright temporal sampling helper
 - `RESEARCH.md`: research register
@@ -42,6 +43,12 @@ The downloadable v1.0.0 package may include additional validation and evaluation
 ## Relationship to design systems
 
 Web Motion Director is designed to work under a project's existing `DESIGN.md`, component library, architecture, and CI workflow. It does not impose a single visual style or animation library.
+
+## Relationship to Graphic Design
+
+Use [Graphic Design](https://github.com/MikeyNu/agent-graphic-designer) alongside this skill when creating or redesigning an interface. Follow [the coordination guide](references/graphic-design-coordination.md): compose and prototype together, share one brief, and let playback inform the layout. It is an optional companion, not a hidden runtime dependency or a requirement to use multiple agents.
+
+The 30 October 2026 update establishes this joint workflow and aligns the skills' treatment of aesthetic pleasure. The owner's new UI screenshots were studied in the graphic-design repository. Motion videos are forthcoming; no source timing or choreography from those videos has yet been analyzed.
 
 ## Relationship to Visual Asset Pipeline
 
