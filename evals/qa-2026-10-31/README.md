@@ -1,5 +1,7 @@
 # Approved motion repair, 31 October 2026
 
+The [desktop follow-up](../../VALIDATION-2026-10-31-DESKTOP.md) subsequently exercised this unchanged controller in local Edge, including keyboard, reversal, reduced motion, and layout. NOT RUN statements below describe the initial constrained exercise and remain historical evidence.
+
 This is a retained fresh-context exercise, not a production-ready component or default motion recipe. Give a new evaluator only the neutral task below, [original fixture](index.html), actual capability limits, and the skill. Withhold the corrected source, checks, and this diagnosis until the output is complete.
 
 ## Task

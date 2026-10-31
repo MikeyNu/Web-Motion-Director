@@ -1,5 +1,7 @@
 # Web Motion Director 1.2.2 QA, 31 October 2026
 
+**Follow-up:** the user authorized local desktop-browser testing and confirmed a GitHub billing blocker. The [desktop follow-up](VALIDATION-2026-10-31-DESKTOP.md) records the subsequently executed browser checks. Earlier NOT RUN statements below describe the initial environment, not the later desktop run.
+
 This release strengthens task interpretation, lifecycle recovery, helper contracts, and verification language. The [joint five-case record](https://github.com/MikeyNu/agent-graphic-designer/blob/main/evals/validation-2026-10-31-qa.md) contains the complete exercise method, original findings, and capability limits. It is not evidence that every future agent result will be correct.
 
 ## Package and instruction review

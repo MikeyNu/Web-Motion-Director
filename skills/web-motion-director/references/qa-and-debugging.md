@@ -125,3 +125,5 @@ For retained-page behavior, record whether a real back/forward cache restoration
 The optional [browser sampler](../scripts/README.md) captures static scroll positions. Its normal/reduced contexts do not prove that the two experiences differ appropriately, and its running-animation count is not a frame-rate measurement. Inspect the images and actual sequences separately. Follow host tool policies; an unavailable or blocked runtime is a limitation to report, not permission to bypass it.
 
 Do not write “motion verified” when only typecheck or build ran.
+
+Validate unexpected test failures before changing the UI. Native browser controls can receive focus outside the document; distinguish that from a background-page control becoming focusable through an open modal. Preserve failure evidence and document any corrected harness assumption. Capture viewport images for fixed overlays because a full-page composite can misrepresent what is simultaneously visible. Numeric motion traces supplement visual inspection; they do not alone certify perceived smoothness or device performance.
